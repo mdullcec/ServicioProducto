@@ -14,11 +14,21 @@ public class Producto {
     private String nombre;
     @Column(name="precio")
     private Double precio;
+@Transient
+private Integer port;
 
-    public Producto(String nombre, Double precio) {
+    public Integer getPort() {
+        return port;
+    }
+
+    public void setPort(Integer port) {
+        this.port = port;
+    }
+
+   /* public Producto(String nombre, Double precio) {
         this.nombre = nombre;
         this.precio = precio;
-    }
+    }*/
 
     public Producto() {
 
